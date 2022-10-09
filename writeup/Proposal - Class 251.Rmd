@@ -1,0 +1,31 @@
+---
+title: "Proposal for class 251"
+author: "Samah Abdelrahim"
+date: "2022-10-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Justification:
+I am interested in the development of word learning, acquisition of categories, and generalization of names durinig childhood. The original paper is discussing the idea of the shape bias. They argue against the shape bias being a result of the language effect on thought, or an innate bias that facilitates the word meaning process. Instead, they hypothesize that shape bias emerges out of environmental factors that affect the kind of categories people encounter and talk about  in their daily life. Their hypothesis goes in line with the statistical regularities hypothesis which argues that the way people talk about things modulates this bias towards shape. 
+Their work is a comparison between two populations that vary in the their level of industrialization which are people in the United States and people of the Tsimane’ who is less exposed to industrial artifacts. They compared the strength of shape bias between them. 
+the original paper contains 7 experiments, but this replication project will only conduct the 5th experiment.
+```{r cars}
+
+```
+
+## Stimuli:
+Pictures of novel objects that are given novel names in a one-shot learning trial. 
+
+## Procedures:
+The participant sees a picture of the exempler object on a single screen with a sentence in the top that says something like "this is a yarn" or any other novel name in a sentence of the structure "this is a(n) x".
+Below, the text read “One of these is also a(n) x” along with three pictures: one shape-matched object, one material-matched object, and color-matched object. The experimenter then asks “can you point to the x?”.
+A text below also reads “Which one is the other x?” Participants were allowed to select one of the three objects.
+
+## link to Repo:
+git@github.com:psych251/jara-ettinger2022.git 
+
+
