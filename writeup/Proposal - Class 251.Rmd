@@ -26,6 +26,7 @@ Below, the text read “One of these is also a(n) x” along with three pictures
 A text below also reads “Which one is the other x?” Participants were allowed to select one of the three objects.
 
 ## link to Repo:
-git@github.com:psych251/jara-ettinger2022.git 
+git@github.com:psych251/jara-ettinger2022.git ---
+https://github.com/psych251/jara-ettinger2022 
 
 
