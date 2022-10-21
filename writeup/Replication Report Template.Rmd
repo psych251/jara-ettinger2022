@@ -1,6 +1,6 @@
 ---
 title: "Replication of Study The Origins of the Shape Bias: Evidence From the Tsimane’ by Julian Jara-Ettinger et al. (2022 American Psychological Association)"
-author: "Replication Author[s] (contact information)"
+author: "Samah Abdelrahim (samahabd@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document:
@@ -14,8 +14,9 @@ output:
 
 ##Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
-
+The original paper is discussing the idea of the shape bias. They argue against the shape bias being a result of the language effect on thought, or an innate bias that facilitates the word meaning process. Instead, they hypothesize that shape bias emerges out of environmental factors that affect the kind of categories people encounter and talk about  in their daily life. Their hypothesis goes in line with the statistical regularities hypothesis which argues that the way people talk about things modulates this bias towards shape. 
+Their work is a comparison between two populations that vary in the their level of industrialization which are people in the United States and people of the Tsimane’ who is less exposed to industrial artifacts. They compared the strength of shape bias between them. 
+the original paper contains 7 experiments, but this replication project will only conduct the 5th experiment.
 
 ##Methods
 
@@ -25,25 +26,33 @@ Original effect size, power analysis for samples to achieve 80%, 90%, 95% power 
 
 ###Planned Sample
 
-Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
+The study was done with 144 english speaking adults from the US. They used a termination rule of having a sample size that is large enough to allow them to fully counterbalance all aspects of experimental design.
 
 ###Materials
 
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+For the replication experiment which is experiment 5 in the original article, the study was done online so they used photographs of solid objects that varied in shape, color, and material. 
 
 ###Procedure	
 
-Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+The experiment consisted of three example objects and three extension objects. The experiment was a one-shot learning trials and each participant completed one trial only. in this trial, each participant saw only one example object (counterbalanced across participants) and all extension objects. 
+The participant sees a picture of the exempler object on a single screen with a sentence in the top that says something like "this is a yarn" or any other novel name in a sentence of the structure "this is a(n) x". Below, the text read “One of these is also a(n) x” along with three pictures: one shape-matched object, one material-matched object, and color-matched object. A text below also reads “Which one is the other x?” Participants were allowed to select one of the three objects.
+They used three different possible labels, randomized across participants. The labels for the US participants were “koba,” “dax,” or “fep”. 
 
 ###Analysis Plan
 
 Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
 
+Data cleaning will be in the form of taking only a subset of the data frame that contains the features/columns of interest. No exclusion rule will be applied unless the participant didn't answer the question at all. 
+Then, I will present a simple descriptive statitics of the data by reporting the percentage of participants who extended by shape against those who extended by either color or material. 
+Since i will only be testing English speaking adults from the US, there won't be any interaction effects of age or population. 
+I will use a logistic model to test participant's preference for shape matches as a function of the exempler object. 
+
 **Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
 
 ###Differences from Original Study
 
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
+No differences from the original paper are planned.
+
 
 ### Methods Addendum (Post Data Collection)
 
@@ -67,7 +76,7 @@ Data preparation following the analysis plan.
 ###Data Preparation
 
 ####Load Relevant Libraries and Functions
-
+library(tidyverse)
 ####Import data
 
 #### Data exclusion / filtering
@@ -78,6 +87,7 @@ Data preparation following the analysis plan.
 ### Confirmatory analysis
 
 The analyses as specified in the analysis plan.  
+If participants used shape matches to extend the word more than they used material or color, then the result is replicated. Also, 
 
 *Side-by-side graph with original graph is ideal here*
 

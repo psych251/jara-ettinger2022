@@ -22,7 +22,7 @@ Pictures of novel objects that are given novel names in a one-shot learning tria
 
 ## Procedures:
 The participant sees a picture of the exempler object on a single screen with a sentence in the top that says something like "this is a yarn" or any other novel name in a sentence of the structure "this is a(n) x".
-Below, the text read “One of these is also a(n) x” along with three pictures: one shape-matched object, one material-matched object, and color-matched object. The experimenter then asks “can you point to the x?”.
+Below, the text read “One of these is also a(n) x” along with three pictures: one shape-matched object, one material-matched object, and color-matched object. 
 A text below also reads “Which one is the other x?” Participants were allowed to select one of the three objects.
 
 ## link to Repo:
