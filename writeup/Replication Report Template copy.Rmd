@@ -89,7 +89,7 @@ library(ggplot2)
 library(here)
 library(lme4)
 ####Import datare
-d = read.csv("Jara-ettinger2022_November 27, 2022_14.55.csv")
+d = read.csv("/Users/samahabdelrahim/Desktop/jara-ettinger2022/code/Jara-ettinger2022_November 27, 2022_14.55.csv")
 
 head(d)
 
@@ -97,6 +97,8 @@ head(d)
 d_filtered = d %>% select(c("ResponseId", "Q5", "Q9", "Q12"))
 d_filtered_long = d_filtered %>% 
   pivot_longer(cols = -c("ResponseId") ,names_to = 'Example', values_to = 'Choice')
+
+#use slice instead of filter
 
 #### Prepare data for analysis - create columns etc.
 
@@ -172,6 +174,16 @@ The analyses as specified in the analysis plan.
 If participants used shape matches to extend the word more than they used material or color, then the result is replicated. No comparison will be shown here since i am only testing one population (US adults).
 
 ``` {r include = T}
+#d_filtered_long_summarized = df_combined %>%
+ # group_by(Example, Choice, Location) %>%
+  #summarise(n = n(), avg = n / count(Location == Location))
+  #summarise(counter = n(Match == "Shape"))
+
+#using only us data
+#graph1 <- ggplot(d_filtered_long, aes(x=Choice, fill=Example)) +
+ # geom_bar(position="dodge")  
+#graph1
+
 
 ggplot(df_combined, aes(x=Example, fill = Choice)) +
   geom_bar(position = "dodge", width = .7) +
@@ -197,6 +209,13 @@ data_new <- d_filtered_long
 data_new$Choice[data_new$Choice == "Shape"] <- 1
 data_new$Choice[data_new$Choice == "Material"] <- 0
 
+# Duplicate data
+#data_new[is.na(data_new) | data_new == "Inf"] <- NA
+#model2 = glmer (Choice ~ Question, data_new)
+#model1 = lm(Choice ~ Example, data_new)
+#model1
+#summary(model1)
+#chisq.test(d_filtered_long$Choice, d_filtered_long$Example, correct=FALSE)
 
 #using the combined data
 m <- glmer(Choice=="Shape" ~  Location  + (1 + Location| Example) + (1 | Experiment),df_combined,family="binomial")
